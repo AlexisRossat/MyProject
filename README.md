@@ -1,5 +1,5 @@
-### Install de zéro - Non recommandé !
-### Passez directement au chapitre suivant
+## Install de zéro /!\ Non recommandé /!\
+### => Passez directement au chapitre suivant
 
 Install de docker-compose : 
 
@@ -18,9 +18,9 @@ Configuration :
  - copier le makefile et le docker-compose.yml dans MyProject/
  - copier ou écrire le .env.local
 
-### Install à partir de l'archive 
+## Install à partir de l'archive 
 
-#### Méthode 1
+### Méthode 1
 
 Clonez le dépôt depuis GitHub :
 
@@ -80,9 +80,9 @@ Démarrez le projet :
 make start
 ```
 
-### Voilà, ça marche !
+## Voilà, ça marche !
 
-Pour accéder à phpmyadmin : 
+Pour accéder à PhpMyAdmin : 
  - Url : "http://localhost:8080/"
  - Login: "root"
  - Password : "" (aucun)
