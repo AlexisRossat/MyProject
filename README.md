@@ -53,15 +53,15 @@ cd ~/Projects
 mkdir mysql-data-dir
 ```
 
-Le volume pour la DB doit se trouver dans `/home/{user}/Projects/mysql-data-dir`.
+Le volume pour la base de données doit donc se trouver dans `/home/{user}/Projects/mysql-data-dir`.
 
-Installez make, docker et docker-compose :
+Maintenant, installez `make`, `docker` et `docker-compose` :
 
 ```console
 sudo apt install make docker docker-compose
 ```
 
-Dans le Dockerfile (`/home/user/Projects/MyProject/docker/web/Dockerfile`), modifiez la dernière ligne en indiquant votre nom d'utilisateur :
+Dans le Dockerfile (`/home/user/Projects/MyProject/docker/web/Dockerfile`), modifiez la dernière ligne en indiquant votre nom d'utilisateur (3 occurrences) :
 
 ```console
 id user # Remplacez user par votre nom d'utilisateur
