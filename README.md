@@ -22,12 +22,12 @@ Configuration :
 
 ### Méthode 1 (recommandée)
 
-Clonez le dépôt depuis GitHub :
+Clonez le dépôt depuis GitHub (en SSH) :
 
 ```console
 cd ~
 mkdir Projects
-git clone https://github.com/AlexisRossat/MyProject.git
+git clone git@github.com:AlexisRossat/MyProject.git
 ```
 
 Puis passez à l'étape de **Configuration du projet**.
@@ -49,6 +49,7 @@ Le projet doit se trouver dans `/home/{user}/Projects/MyProject`.
 Créez le dossier "mysql-data-dir" dans le répertoire "Projects" :
 
 ```console
+cd ~/Projects
 mkdir mysql-data-dir
 ```
 
