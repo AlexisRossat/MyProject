@@ -1,0 +1,34 @@
+version: '3.3'
+# version: '3.7'
+
+services:
+  web:
+    build:
+      context: ./docker/web
+    working_dir: /srv
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/srv
+      - ./docker/web/web.conf:/etc/apache2/sites-enabled/000-default.conf
+    environment:
+      - APP_ENV=${APP_ENV}
+  db:
+    image: mysql:5
+    ports:
+      - "3306:3306"
+    # environment:
+      # MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      # MYSQL_USER: 'test'
+      # MYSQL_PASSWORD: 'test'
+      # MYSQL_ROOT_PASSWORD: 'root'
+    volumes:
+      - /home/alexis/Projects/mysql-data-dir:/var/lib/mysql #Volume permanent ou serra stocké votre base
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - "8080:80"
+    depends_on:
+        - db
+    environment:
+      PMA_HOST: db
