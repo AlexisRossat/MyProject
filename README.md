@@ -20,7 +20,7 @@ Configuration :
 
 ## Install à partir de l'archive 
 
-### Méthode 1
+### Méthode 1 (recommandée)
 
 Clonez le dépôt depuis GitHub :
 
@@ -32,11 +32,9 @@ git clone https://github.com/AlexisRossat/MyProject.git
 
 Puis passez à l'étape de **Configuration du projet**.
 
-### Méthode 2
+### Méthode 2 (non recommandée)
 
-Téléchargez l'archive dans votre dossier personnel (`/home/user`).
-
-Décompressez l'archive dans un nouveau dossier "Projects" : 
+Téléchargez l'archive dans votre dossier personnel (`/home/{user}`) puis décompressez l'archive dans un nouveau dossier "Projects" : 
 
 ```console
 cd ~
@@ -46,15 +44,15 @@ tar zxvf MyProject.tar.gz
 ```
 
 ### Configuration du projet 
-Le projet doit se trouver dans `/home/user/Projects/MyProject`.
+Le projet doit se trouver dans `/home/{user}/Projects/MyProject`.
 
-Créez le dossier mysql-data-dir dans le répertoire "Projects" :
+Créez le dossier "mysql-data-dir" dans le répertoire "Projects" :
 
 ```console
 mkdir mysql-data-dir
 ```
 
-Le volume pour la DB doit se trouver dans `/home/user/Projects/mysql-data-dir`.
+Le volume pour la DB doit se trouver dans `/home/{user}/Projects/mysql-data-dir`.
 
 Installez make, docker et docker-compose :
 
@@ -62,16 +60,16 @@ Installez make, docker et docker-compose :
 sudo apt install make docker docker-compose
 ```
 
-Dans le Dockerfile (`/home/user/Projects/MyProject/docker/web/Dockerfile`), modifiez la dernière ligne qui crée un utilisateur pour correpondre au votre :
+Dans le Dockerfile (`/home/user/Projects/MyProject/docker/web/Dockerfile`), modifiez la dernière ligne en indiquant votre nom d'utilisateur :
 
 ```console
 id user # Remplacez user par votre nom d'utilisateur
 ```
 
-Paramétrez le chemin vers la DB en modifiant le fichier `docker-compose.yml` :
+Paramétrez le chemin vers la base de données en modifiant le fichier `docker-compose.yml` :
 
 ```console
-/home/user/Projects/mysql-data-dir:/var/lib/mysql
+/home/{user}/Projects/mysql-data-dir:/var/lib/mysql
 ```
 
 Démarrez le projet :
