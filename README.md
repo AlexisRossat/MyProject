@@ -1,4 +1,5 @@
-### Install de zéro
+### Install de zéro - Non recommandé !
+### Passez directement au chapitre suivant
 
 Install de docker-compose : 
 
@@ -19,7 +20,21 @@ Configuration :
 
 ### Install à partir de l'archive 
 
-Téléchargez l'archive dans votre dossier personnel (/home/user)
+#### Méthode 1
+
+Clonez le dépôt depuis GitHub :
+
+```console
+cd ~
+mkdir Projects
+git clone https://github.com/AlexisRossat/MyProject.git
+```
+
+Puis passez à l'étape de **Configuration du projet**.
+
+### Méthode 2
+
+Téléchargez l'archive dans votre dossier personnel (`/home/user`).
 
 Décompressez l'archive dans un nouveau dossier "Projects" : 
 
@@ -30,7 +45,8 @@ cd Projects
 tar zxvf MyProject.tar.gz
 ```
 
-Le projet doit se trouver dans `/home/user/Projects/MyProject`
+### Configuration du projet 
+Le projet doit se trouver dans `/home/user/Projects/MyProject`.
 
 Créez le dossier mysql-data-dir dans le répertoire "Projects" :
 
@@ -38,7 +54,7 @@ Créez le dossier mysql-data-dir dans le répertoire "Projects" :
 mkdir mysql-data-dir
 ```
 
-Le volume pour la DB doit se trouver dans `/home/user/Projects/mysql-data-dir`
+Le volume pour la DB doit se trouver dans `/home/user/Projects/mysql-data-dir`.
 
 Installez make, docker et docker-compose :
 
@@ -49,7 +65,7 @@ sudo apt install make docker docker-compose
 Dans le Dockerfile (`/home/user/Projects/MyProject/docker/web/Dockerfile`), modifiez la dernière ligne qui crée un utilisateur pour correpondre au votre :
 
 ```console
-id user # Remplacer user par votre nom d'utilisateur
+id user # Remplacez user par votre nom d'utilisateur
 ```
 
 Paramétrez le chemin vers la DB en modifiant le fichier `docker-compose.yml` :
@@ -67,9 +83,9 @@ make start
 ### Voilà, ça marche !
 
 Pour accéder à phpmyadmin : 
-Url : "http://localhost:8080/"
-Login: "root"
-Password : "" (aucun)
+ - Url : "http://localhost:8080/"
+ - Login: "root"
+ - Password : "" (aucun)
 
 Pour accéder au projet (web)
-Url : "http://localhost:8000/"
+ - Url : "http://localhost:8000/"
