@@ -64,7 +64,7 @@ Maintenant, installez `make`, `docker` et `docker-compose` :
 sudo apt install make docker docker-compose
 ```
 
-Dans le Dockerfile (`/home/user/Projects/MyProject/docker/web/Dockerfile`), modifiez la dernière ligne en indiquant votre nom d'utilisateur (3 occurrences) :
+Dans le Dockerfile (`/home/{user}/Projects/MyProject/docker/web/Dockerfile`), modifiez la dernière ligne en indiquant votre nom d'utilisateur (3 occurrences) :
 
 ```console
 id user # Remplacez user par votre nom d'utilisateur
