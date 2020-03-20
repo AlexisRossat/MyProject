@@ -79,7 +79,7 @@ Paramétrez le chemin vers la base de données en modifiant le fichier `docker-c
 Démarrez le projet :
 
 ```console
-make start
+make restart
 ```
 
 ## Voilà, ça marche !
