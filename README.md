@@ -22,12 +22,15 @@ Configuration :
 
 ### Méthode 1 (recommandée)
 
-Clonez le dépôt depuis GitHub (en SSH) :
+Clonez le dépôt depuis GitHub (SSH ou HTTPS, au choix) :
 
 ```console
 cd ~
 mkdir Projects
+# SSH
 git clone git@github.com:AlexisRossat/MyProject.git
+# HTTPS
+git clone https://github.com/AlexisRossat/MyProject.git
 ```
 
 Puis passez à l'étape de **Configuration du projet**.
