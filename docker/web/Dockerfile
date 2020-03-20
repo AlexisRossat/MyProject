@@ -28,4 +28,4 @@ RUN chmod +x /usr/local/bin/composer
 
 # On créé un utilisateur avec le même gid/uid que votre local
 # cela va permettre que les fichiers qui sont créés dans le contenaire auront vos droits
-RUN addgroup --system alexis --gid 1000 && adduser --system alexis --uid 1000 --ingroup alexis
+RUN addgroup --system {user} --gid 1000 && adduser --system {user} --uid 1000 --ingroup {user}
